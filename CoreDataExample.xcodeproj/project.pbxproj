@@ -13,6 +13,9 @@
 		AB33FA0A2CF606E600D1D935 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AB33FA092CF606E600D1D935 /* Base */; };
 		AB33FA0C2CF606E700D1D935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB33FA0B2CF606E700D1D935 /* Assets.xcassets */; };
 		AB33FA0F2CF606E700D1D935 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AB33FA0E2CF606E700D1D935 /* Base */; };
+		AB33FA182CF60B7600D1D935 /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB33FA162CF60B7600D1D935 /* CoreDataExample.xcdatamodeld */; };
+		AB33FA1B2CF60C0C00D1D935 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33FA192CF60C0C00D1D935 /* ToDoListItem+CoreDataClass.swift */; };
+		AB33FA1C2CF60C0C00D1D935 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33FA1A2CF60C0C00D1D935 /* ToDoListItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AB33FA0B2CF606E700D1D935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB33FA0E2CF606E700D1D935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB33FA102CF606E700D1D935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB33FA172CF60B7600D1D935 /* CoreDataExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataExample.xcdatamodel; sourceTree = "<group>"; };
+		AB33FA192CF60C0C00D1D935 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AB33FA1A2CF60C0C00D1D935 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		AB33FA012CF606E600D1D935 /* CoreDataExample */ = {
 			isa = PBXGroup;
 			children = (
+				AB33FA1D2CF60C2900D1D935 /* ToDoListItem */,
 				AB33FA022CF606E600D1D935 /* AppDelegate.swift */,
 				AB33FA042CF606E600D1D935 /* SceneDelegate.swift */,
 				AB33FA062CF606E600D1D935 /* ViewController.swift */,
@@ -63,8 +70,18 @@
 				AB33FA0B2CF606E700D1D935 /* Assets.xcassets */,
 				AB33FA0D2CF606E700D1D935 /* LaunchScreen.storyboard */,
 				AB33FA102CF606E700D1D935 /* Info.plist */,
+				AB33FA162CF60B7600D1D935 /* CoreDataExample.xcdatamodeld */,
 			);
 			path = CoreDataExample;
+			sourceTree = "<group>";
+		};
+		AB33FA1D2CF60C2900D1D935 /* ToDoListItem */ = {
+			isa = PBXGroup;
+			children = (
+				AB33FA192CF60C0C00D1D935 /* ToDoListItem+CoreDataClass.swift */,
+				AB33FA1A2CF60C0C00D1D935 /* ToDoListItem+CoreDataProperties.swift */,
+			);
+			path = ToDoListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +157,10 @@
 			files = (
 				AB33FA072CF606E600D1D935 /* ViewController.swift in Sources */,
 				AB33FA032CF606E600D1D935 /* AppDelegate.swift in Sources */,
+				AB33FA1B2CF60C0C00D1D935 /* ToDoListItem+CoreDataClass.swift in Sources */,
+				AB33FA1C2CF60C0C00D1D935 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				AB33FA052CF606E600D1D935 /* SceneDelegate.swift in Sources */,
+				AB33FA182CF60B7600D1D935 /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +319,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +347,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +383,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AB33FA162CF60B7600D1D935 /* CoreDataExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB33FA172CF60B7600D1D935 /* CoreDataExample.xcdatamodel */,
+			);
+			currentVersion = AB33FA172CF60B7600D1D935 /* CoreDataExample.xcdatamodel */;
+			name = CoreDataExample.xcdatamodeld;
+			path = "/Users/KaiD/Documents/1 My Projects/CoreDataExample/CoreDataExample/CoreDataExample.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AB33F9F72CF606E600D1D935 /* Project object */;
 }
